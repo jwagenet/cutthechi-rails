@@ -1,2 +1,12 @@
 <% provide(:title, @user.name) %>
 <h1><%= @user.name %></h1>
+
+
+<% if @user.bids.any? %>
+	<p>Bid History: You have placed <%= @user.bids.count %> bids.</p>
+	<ol>
+		<%= render @bids %>
+	</ol>
+<% else %>
+	<p>You haven't made any bids</p>
+<% end %>

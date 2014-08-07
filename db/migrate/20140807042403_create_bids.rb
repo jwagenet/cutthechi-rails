@@ -1,12 +1,12 @@
 class CreateBids < ActiveRecord::Migration
   def change
     create_table :bids do |t|
-      t.integer :candidateid
-      t.integer :userid
+      t.integer :candidate_id
+      t.integer :user_id
       t.integer :bid
 
       t.timestamps
     end
-		add_index :bids, [:candidateid, :userid]
+		add_index :bids, [:candidate_id, :user_id]
   end
 end

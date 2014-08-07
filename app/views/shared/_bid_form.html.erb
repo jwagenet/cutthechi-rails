@@ -1,0 +1,7 @@
+<%= form_for(@bid) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	<%= f.label :bid, "Bid: $" %>
+	<%= f.text_area :bid, placeholder: "$" %>
+	<%= f.text_area :candidate_id, value: candidate.id, display: hidden %>
+	<%= f.submit "Place Bid" %>
+<% end %>

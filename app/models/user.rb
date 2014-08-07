@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+	has_many :bids, dependent: :destroy
+	has_many :candidates, through: :bids
+
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
 	validates :name, presence: true

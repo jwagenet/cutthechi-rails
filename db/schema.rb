@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20140807042403) do
 
   create_table "bids", force: true do |t|
-    t.integer  "candidateid"
-    t.integer  "userid"
+    t.integer  "candidate_id"
+    t.integer  "user_id"
     t.integer  "bid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "bids", ["candidateid", "userid"], name: "index_bids_on_candidateid_and_userid"
+  add_index "bids", ["candidate_id", "user_id"], name: "index_bids_on_candidate_id_and_user_id"
 
   create_table "candidates", force: true do |t|
     t.string   "name"

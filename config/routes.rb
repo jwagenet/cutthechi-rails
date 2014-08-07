@@ -3,12 +3,14 @@ Rails.application.routes.draw do
 	resources :users
 	resources :sessions, only: [:new, :create, :destroy]
 	resources :candidates, only: [:index]
+	resources :bids, only: [:create, :destroy]
 	root 'statics#index'
 	match '/event', 		to: 'statics#event', 		via: 'get'
 	match '/register', 	to: 'users#new', 				via: 'get'
 	match '/login',  		to: 'sessions#new',     via: 'get'
 	match '/logout', 		to: 'sessions#destroy', via: 'delete'
-	match '/:name', to: 'users#show', 			via: 'get'
+	match '/history/:name', 	to: 'users#show',	via: 'get'
+  match '/settings/:name', 	to: 'users#edit', 	via: 'get'
 
 	
 

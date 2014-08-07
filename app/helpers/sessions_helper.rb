@@ -24,6 +24,13 @@ module SessionsHelper
 		user == current_user
 	end
 
+	def logged_in_user
+		unless logged_in?
+			store_location
+			redirect_to login_url, notice: "Please log in." unless logged_in?
+		end
+	end
+
 	def logout
     current_user.update_attribute(:remember_token, User.digest(User.new_remember_token))
     cookies.delete(:remember_token)
