@@ -42,11 +42,13 @@ If you would like to play along at home, get an environment set up with ruby 2.x
 
 To get up and running you should navigate to the downloaded git repo of the app and:
 
-```$ bundle install --without production
+```
+$ bundle install --without production
 $ bundle update
 $ bundle exec rake db:migrate
 $ bundle exec rake csv:Import_Candidates
-$ rails server```
+$ rails server
+```
 
 The local server can be accessed at [localhost:3000](localhost:3000).
 
