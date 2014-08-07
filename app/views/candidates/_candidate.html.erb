@@ -1,0 +1,17 @@
+    <li>
+      <%= image_tag "photos/#{candidate.photo}.jpg", alt: candidate.name %>
+      <p><%= candidate.name %></p>
+			<p>Highest Bid: $<%= highest_bid candidate %></p>
+			<p><%= candidate.comment %></p>
+			<% if logged_in? %>
+				<%= form_for(@bid) do |f| %>
+					<%= render 'shared/error_messages', object: f.object %>
+					<%= f.label :bid, "Bid: $" %>
+					<%= f.text_field :bid, placeholder: minimum_bid(candidate) %>
+					<%= f.hidden_field :candidate_id, value: candidate.id %>
+					<%= f.submit "Place Bid" %>
+				<% end %>
+			<% else %>
+				<%= link_to "Log in to bid", login_path %>
+			<% end %>
+    </li>

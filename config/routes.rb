@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 	match '/logout', 		to: 'sessions#destroy', via: 'delete'
 	match '/history/:name', 	to: 'users#show',	via: 'get'
   match '/settings/:name', 	to: 'users#edit', 	via: 'get'
+	match '/candidates', 			to: 'candidates#index', via: 'get'
 
 	
 
