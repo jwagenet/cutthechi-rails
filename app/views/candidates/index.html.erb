@@ -1,0 +1,13 @@
+<% provide(:title, 'Candidates') %>
+<h1>Candidates</h1>
+
+<ul class="candidates">
+  <% @candidates.each do |candidate| %>
+    <li>
+      <%= image_tag "photos/#{candidate.photo}.jpg", alt: candidate.name %>
+      <p><%= candidate.name %></p>
+			<p><%= candidate.comment %></p>
+			
+    </li>
+  <% end %>
+</ul>
