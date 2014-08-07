@@ -1,0 +1,19 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <%= link_to "cutthechi", '#', id: "logo" %>
+      <nav>
+      <ul class="nav">
+			<li><%= link_to "Home",    	root_path %></li>
+			<li><%= link_to "Event",  	event_path %></li>
+			
+			<% if logged_in? %>
+				<li>Welcome, <%= current_user.name %></li>
+				<li><%= link_to "Your Bids", current_user %></li>
+				<li><%= link_to "Settings", edit_user_path(current_user) %></li>
+				<%= link_to "Logout", logout_path, method: "delete" %>
+			<% else %>
+				<li><%= link_to "Register",	register_path %></li>
+				<li><%= link_to "Login",		login_path %></li>
+			<% end %>
+      </ul>
+      </nav>
+</header>
