@@ -50,7 +50,7 @@ $ bundle exec rake csv:Import_Candidates
 $ rails server
 ```
 
-The local server can be accessed at [localhost:3000](localhost:3000).
+The local server can be accessed at [localhost:3000](http://localhost:3000).
 
 
 
