@@ -1,5 +1,5 @@
 class BidsController < ApplicationController
-	before_action :logged_in_user
+	before_action :logged_in_user, only: [:create, :destroy]
 	
 	def create
 		@bid = current_user.bids.build(bid_params)
@@ -7,7 +7,7 @@ class BidsController < ApplicationController
 			flash[:success] = "Thanks for bidding!"
 			redirect_to root_path
 		else
-			redirect_to candidates_path
+			render :template => "candidates/#{@bid.candidate_id}"
 		end
 	end
 

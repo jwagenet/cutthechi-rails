@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
 	resources :users
 	resources :sessions, only: [:new, :create, :destroy]
-	resources :candidates, only: [:index]
+	resources :candidates, only: [:index,:show]
 	resources :bids, only: [:create, :destroy]
 	root 'statics#index'
 	match '/event', 		to: 'statics#event', 		via: 'get'
@@ -12,11 +12,10 @@ Rails.application.routes.draw do
 	match '/history/:name', 	to: 'users#show',	via: 'get'
   match '/settings/:name', 	to: 'users#edit', 	via: 'get'
 	match '/candidates', 			to: 'candidates#index', via: 'get'
+	#match '/candidate/:id', to: 'candidates#show', via: 'get'
 
 	
 
-  #get 'users/new'
-	#get 'static/event'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
