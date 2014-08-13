@@ -7,7 +7,7 @@ class BidsController < ApplicationController
 			flash[:success] = "Thanks for bidding!"
 			redirect_to root_path
 		else
-			render :template => "candidates/#{@bid.candidate_id}"
+			render "candidates/#{@bid.candidate_id}"
 		end
 	end
 
