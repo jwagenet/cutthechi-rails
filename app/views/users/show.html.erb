@@ -4,9 +4,9 @@
 <section id="bid-history">
 <% if @user.bids.any? %>
 	<p>Bid History: You have placed <%= @user.bids.count %> bids.</p>
-	<ol>
+	<table>
 		<%= render @bids %>
-	</ol>
+	</table>
 <% else %>
 	<p>You haven't made any bids</p>
 <% end %>
