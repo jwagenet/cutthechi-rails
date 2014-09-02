@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807042403) do
+ActiveRecord::Schema.define(version: 20140901230740) do
 
   create_table "bids", force: true do |t|
     t.integer  "candidate_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20140807042403) do
     t.integer  "bid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "minimum_bid"
   end
 
   add_index "bids", ["candidate_id", "user_id"], name: "index_bids_on_candidate_id_and_user_id"

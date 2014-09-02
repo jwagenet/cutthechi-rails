@@ -1,8 +1,17 @@
 <% provide(:title, @user.name) %>
 <h1><%= @user.name %></h1>
 
+
+
 <section id="bid-history">
 <% if @user.bids.any? %>
+
+	<table>
+		<%= @bids = @active %>
+		<%= render @bids %>
+		<%= @bids = @old %>
+	</table>
+
 	<p>Bid History: You have placed <%= @user.bids.count %> bids.</p>
 	<table>
 		<%= render @bids %>

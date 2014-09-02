@@ -4,7 +4,8 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@bids = @user.bids.order('created_at DESC')
+		@bids = @old = @user.bids.order('created_at DESC')
+		@active = @bids & active_bids
 	end
 
 	def new
@@ -45,5 +46,14 @@ class UsersController < ApplicationController
 			@user = User.find(params[:id])
 			redirect_to(root_url) unless current_user?(@user)
 		end
+
+		def active_bids
+			active = Array.new
+			(1..Candidate.count).each do |i|
+				active.push(Candidate.find(i).bids.order('bid DESC').first)
+			end
+			return active
+		end	
+	
 
 end

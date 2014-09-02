@@ -3,6 +3,7 @@ class BidsController < ApplicationController
 
 	def create
 		@bid = current_user.bids.build(bid_params)
+		
 		if @bid.save
 			flash[:success] = "Thanks for bidding!"
 			redirect_to root_path
@@ -17,7 +18,8 @@ class BidsController < ApplicationController
 
 	private 
 		def bid_params
-			params.require(:bid).permit(:bid, :candidate_id)
+			params.require(:bid).permit(:bid, :candidate_id, :minimum_bid)
 		end
+
 
 end

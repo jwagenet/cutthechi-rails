@@ -17,4 +17,5 @@ module BidsHelper
 		end
 	end
 
+
 end
