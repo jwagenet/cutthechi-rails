@@ -7,9 +7,7 @@
 <% if @user.bids.any? %>
 
 	<table>
-		<%= @bids = @active %>
-		<%= render @bids %>
-		<%= @bids = @old %>
+		<%= render @active %>
 	</table>
 
 	<p>Bid History: You have placed <%= @user.bids.count %> bids.</p>

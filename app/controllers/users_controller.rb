@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
-		@bids = @old = @user.bids.order('created_at DESC')
+		@bids = @user.bids.order('created_at DESC')
 		@active = @bids & active_bids
 	end
 
