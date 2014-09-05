@@ -2,13 +2,13 @@
 	<div class="container">
 	<%= link_to "cutthechi", root_path, id: "logo" %>
 	<nav>
-		<ul>
+		<ul class="list-inline">
 			<li><%= link_to "Home",    	root_path %></li>
 			<li><%= link_to "Event",  	event_path %></li>
 			<li><%= link_to "Bidding", 	candidates_path %></li>
 		</ul>
 
-		<ul>
+		<ul class="list-inline">
 			<% if logged_in? %>
 				<li>Welcome, <%= current_user.name %></li>
 				<li><%= link_to "Your Bids", 	current_user %></li>

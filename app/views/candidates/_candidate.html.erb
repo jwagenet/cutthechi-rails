@@ -1,6 +1,6 @@
-    <li>
-      <%= image_tag "photos/#{candidate.photo}.jpg", alt: candidate.name %>
-      <p class="name"><%= candidate.name %></p>
+    <li class="candidate">
+      <%= image_tag "photos/#{candidate.photo}.jpg", alt: candidate.name, class: "img-responsive" %>
+      <p class="name"><b><%= candidate.name %></b></p>
 			<p class="bid">Highest Bid: $<%= highest_bid candidate %></p>
 			<p class="description"><%= candidate.comment %></p>
 			
@@ -17,6 +17,6 @@
 					<%= f.submit "Place Bid" %>
 				<% end %>
 			<% else %>
-				<%= link_to "Log in to bid", login_path %>
+				<%= link_to "Log in to bid", login_path, class: "link"%>
 			<% end %>
     </li>

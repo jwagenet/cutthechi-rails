@@ -6,12 +6,12 @@
 <section id="bid-history">
 <% if @user.bids.any? %>
 
-	<table>
+	<table class="table table-striped table-condensed">
 		<%= render @active %>
 	</table>
 
 	<p>Bid History: You have placed <%= @user.bids.count %> bids.</p>
-	<table>
+	<table class="table table-striped table-condensed">
 		<%= render @bids %>
 	</table>
 <% else %>
