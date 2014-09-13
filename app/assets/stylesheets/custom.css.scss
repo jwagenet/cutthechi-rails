@@ -1,7 +1,10 @@
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,600,300);
 
 $gray-medium-light: #eaeaea;
+$font-stack: "Open Sans", "Helvetica-Neue", Helvetica, Arial, sans-serif;
+$primarycolor: #FF5400;
+
 
 /* universal */
 
@@ -11,12 +14,19 @@ $gray-medium-light: #eaeaea;
   box-sizing: border-box;
 }
 
+
+*{
+	font: 100% $font-stack;
+	}
+
 html {
   overflow-y: scroll;
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 0px;
+  background:#F7F7F7;
+
 }
 
 section {
@@ -41,76 +51,146 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+  font-size: 2em;
+  letter-spacing: -1px;
+  font-weight:600;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 h2 {
   font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   text-align: center;
-  font-weight: normal;
-  color: $gray-light;
+  font-weight: 400;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+	.center{
+		text-align:center;
+		}
 }
+ul{
+	padding:0;
+	}
 
+a{
+	color:$primarycolor;
+	&:hover{
+		color:$primarycolor;
+		}
+	}
+input[type=submit]{
+	background:$gray;
+	color:white;
+	font-size:1.1em;
+	padding:5px 0;
+	border:none;
+	margin-top:10px;
+	outline: none;
+			border: none !important;
+		 -webkit-box-shadow: none !important;
+			-moz-box-shadow: none !important;
+		box-shadow: none !important;
+	&:hover{
+		text-decoration:underline;
+		}
+	&:active{
+		background:$primarycolor;
+		text-decoration:underline;
+		  
+		}
+
+	}
 
 /* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
+header{
+	background: $gray-dark;
+	#logo {
+		float: none;
+		margin-right: 10px;
+		font-size: 1.7em;
+ 		color: $primarycolor;
+ 		text-transform: uppercase;
+ 		letter-spacing: -1px;
+ 		padding-top: 9px;
+ 		font-weight: bold;
+ 		line-height: 1;
+	
+		&:hover {
+			color: white;
+			text-decoration: none;
+		}
+	
+	}
+	nav{
+		display:block;
+		height:40px;
+		
+		p{
+			color:white;
+			float:left;
+			line-height:2em;
+			a{
+				color:white;
+				font-weight:600;
+				margin-right:10px;
+				&:hover{
+						color:white;
+						text-decoration:none;
+						border-bottom:white solid 1px;
+				}
+			}
+		
+		}
+		p:nth-child(even){
+			float:right;
+			a{
+				
+				margin-left:10px;
+				margin-right:0px;
+			}
+		}
+	}
 }
 
 /* footer */
 
 footer {
   margin-top: 45px;
-  padding-top: 5px;
+  padding-top: 20px;
+	padding-bottom: 20px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
     color: $gray;
+    margin-left: 10px;
+	margin-right: 10px;
     &:hover {
       color: $gray-darker;
     }
   }
-  small {
-    float: left;
+  p {
+		text-align:center;
+    
   }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
+	.cc{
+		font-size:.9em;
+	}
 }
 
 /* forms */
-
+form{
+	width:300px;
+	margin:0 auto;
+	}
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
+  padding:4px;
   margin-bottom: 15px;
   @include box_sizing;
 }
@@ -132,22 +212,200 @@ input {
   @extend .error;
 }
 
+.container{
+	max-width:1000px;
+	}
+
+
+#candidates{
+	min-width:280px;
+	max-width:100%;
+	overflow:auto;
+
+	}
+
 
 .candidate{
-	width: 200px;
+	width: 240px;
 	list-style-type:none;
 	float:left;
-	padding:10px;
+	margin:20px;
 	overflow: auto;
+	background:white;
 	
 	.comment{
 		width:100%;
-		height: 300px;
 	}
-	a{
+	.place{
+		
+		label{
+			padding:3px;
+			margin:0;
+			}
+		
+		width:100px;
+		max-width:150px;
+		overflow:auto;
+		margin:10px auto;
+		margin-top:15px;
+
+	}
+		
+	.info{
+		height:100px;
+		padding:0 10px;
+		border:#bbb solid 1px;
+		border-top:none;
+		border-left:none;
+		border-right:none;
+		.bid{
+			width:100%;
+			text-shadow:0 0 5px black;
+			margin-top:-26px;
+			font-weight:700;
+			color:white;
+			}
+		
+		p{
+			margin:0px;
+			
+		}
+	}
+	.login{
+		padding:10px;
 		width:100%;
-		height:50px;
-		padding:auto;
+		border:#bbb solid 2px;
+		border-top:none;
+		border-left:none;
+		border-right:none;
+		}
+	
+	
+	p.center{
+		margin:0;
+		padding: 0;
+		text-align:center;
+		a{
+			font-size:1.1em;
+			font-weight:300;			
+			&:hover{
+				color:$primarycolor;
+				text-decoration:underline;
+			}
+		}
 	}
 	
+	form{
+		border:#bbb solid 2px;
+		border-top:none;
+		border-left:none;
+		border-right:none;
+		width:100%;
+		}
+	input[type=text]{
+		width:50px;
+		font-size:1.1em;
+		margin:0;
+		padding:2px;
+		float:right;
+	}
+	div.field_with_errors{
+		width:50px;
+		overflow:auto;
+		float:left;
+		}
+	input[type=submit]{
+		background: white;
+		padding:10px;
+		font-weight:300;
+		margin:0;
+		border:none;
+		font-size:1.2em;
+		color:$primarycolor;
+		
+		&:hover{
+			text-decoration:underline;
+			border:none;
+		}
+		&:active{
+			background:$primarycolor;
+			border:none;
+			color:white;
+		}
+	}	
 }
+
+#show{
+	margin-top:30px;
+	.candidate{
+		
+		width:360px;
+		margin:0 auto;
+		float:none;
+		}
+}
+
+table{
+	border-bottom:#bbb solid 2px;
+	tr{
+		background:#FFF;
+	}
+	tr:nth-child(even){
+		background: #eee;
+	}
+}
+
+form.search{
+	width:100%;
+	margin-bottom:20px;
+	div{
+		margin:0 auto;
+		width:50%;
+		max-width:500px;
+		overflow:auto;
+	input{
+		float:left;
+		margin:0;
+		width:70%;
+		}
+	input[type=submit]{
+		float:right;
+		width:25%;
+		
+		}
+	}
+}
+.alert-success{
+	background:$primarycolor;
+	color:white;
+	border:none;
+	border-radius:0px;
+	font-size:1.1em;
+	text-align:center;
+	font-weight:600;
+	
+	}
+	
+.alert-error{
+	background:#FF0a00;
+	color:white;
+	border:none;
+	border-radius:0px;
+	font-size:1.1em;
+	text-align:center;
+	font-weight:600;
+	
+	}
+	
+#error_explanation{
+	.alert, .alert-error{
+		display:none;
+		}
+	ul{
+		
+		background:#FF0400;
+		color:white;
+		padding:10px;
+		}
+		
+	}

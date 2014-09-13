@@ -7,6 +7,7 @@ class CandidatesController < ApplicationController
 	def show
 		@candidate = Candidate.find(params[:id])
 		@bid = current_user.bids.build if logged_in?
+		@show = 1
 	end
 
 

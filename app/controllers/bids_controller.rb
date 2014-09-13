@@ -6,9 +6,10 @@ class BidsController < ApplicationController
 		
 		if @bid.save
 			flash[:success] = "Thanks for bidding!"
-			redirect_to root_path
+			redirect_to current_user
 		else
 			@candidate = Candidate.find(params[:bid][:candidate_id])
+			@show = 1
 			render "candidates/show"
 		end
 	end

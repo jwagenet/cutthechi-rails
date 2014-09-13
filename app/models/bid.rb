@@ -17,7 +17,7 @@ class Bid < ActiveRecord::Base
 	end
 	
 	def greater_than_minimum
-		if bid < minimum_bid
+		if bid.blank? || bid < minimum_bid
 			errors.add(:bid, "must be at least $#{minimum_bid}")
 		end
 	end	

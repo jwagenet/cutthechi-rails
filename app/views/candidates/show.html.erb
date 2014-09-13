@@ -1,2 +1,6 @@
-<h1>Candidates#show</h1>
+<% provide(:title, @candidate.name) %>
+<% provide(:show, 1) %>
+
+<ul id="show">
 <%= render @candidate %>
+</div>

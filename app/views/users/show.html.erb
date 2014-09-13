@@ -1,20 +1,38 @@
 <% provide(:title, @user.name) %>
-<h1><%= @user.name %></h1>
+<h1>Here are your bids, <%= @user.name.split[0] %>!</h1>
 
 
 
 <section id="bid-history">
 <% if @user.bids.any? %>
 
+	<h2>You currently have <%= @active.count %> active bids.</h2>
 	<table class="table table-striped table-condensed">
 		<%= render @active %>
 	</table>
 
-	<p>Bid History: You have placed <%= @user.bids.count %> bids.</p>
+	<h2>You have placed <%= @user.bids.count %> bids in total.</h2>
 	<table class="table table-striped table-condensed">
 		<%= render @bids %>
 	</table>
-<% else %>
+	<% else %>
+
+
 	<p>You haven't made any bids</p>
 <% end %>
+
+
+<% if @user.admin %>
+
+	<h2><%= @all_active.count %> active bids.</h2>
+	<table class="table table-striped table-condensed">
+			
+	</table>
+
+	<h2><%= @user.bids.count %> bids in total.</h2>
+	<table class="table table-striped table-condensed">
+		<%= render @all_bids %>
+	</table>
+	<% end %>
+
 </section>

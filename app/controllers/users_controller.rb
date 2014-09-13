@@ -6,6 +6,8 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@bids = @user.bids.order('created_at DESC')
 		@active = @bids & active_bids
+		@all_bids = Bid.all
+		@all_active = active_bids
 	end
 
 	def new

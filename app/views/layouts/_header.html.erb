@@ -1,24 +1,24 @@
 <header>
 	<div class="container">
-	<%= link_to "cutthechi", root_path, id: "logo" %>
-	<nav>
-		<ul class="list-inline">
-			<li><%= link_to "Home",    	root_path %></li>
-			<li><%= link_to "Event",  	event_path %></li>
-			<li><%= link_to "Bidding", 	candidates_path %></li>
-		</ul>
 
-		<ul class="list-inline">
+	<nav>
+		<p>
+			<%= link_to "Home",    	root_path %>
+			<%= link_to "Event",  	event_path %>
+			<%= link_to "Bidding", 	candidates_path %>
+		</p>
+		<p>
 			<% if logged_in? %>
-				<li>Welcome, <%= current_user.name %></li>
-				<li><%= link_to "Your Bids", 	current_user %></li>
-				<li><%= link_to "Settings", 	edit_user_path(current_user) %></li>
-				<li><%= link_to "Logout", 		logout_path, method: "delete" %></li>
+				<span>Welcome, <%= current_user.name.split[0] %></span>
+				<%= link_to "Your Bids", 	current_user %>
+				<%= link_to "Settings", 	edit_user_path(current_user) %>
+				<%= link_to "Logout", 		logout_path, method: "delete" %>
 			<% else %>
-				<li><%= link_to "Register",		register_path %></li>
-				<li><%= link_to "Login",			login_path %></li>
+				<%= link_to "Register",		register_path %>
+				<%= link_to "Login",			login_path %>
 			<% end %>
-		</ul>
+		<p/>
 	</nav>
+		<%= link_to "cutthechi", root_path, id: "logo" %>
 	</div>
 </header>

@@ -1,14 +1,14 @@
 <% provide(:title, 'Candidates') %>
 <h1>Candidates</h1>
 
-<%= form_tag candidates_path, method: 'get' do %>
-	<p>
+<%= form_tag candidates_path, method: 'get', class: "search" do %>
+		<div>
 		<%= text_field_tag :search, params[:search] %>
 		<%= submit_tag "Search", name: nil %>
-	</p>
+		</div>
 <% end %>
 
-<ul class="candidates">
+<ul id="candidates">
 
 		<%= render @candidates %>
 

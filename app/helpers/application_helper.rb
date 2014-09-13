@@ -9,5 +9,23 @@ module ApplicationHelper
 			"#{base_title} | #{page_title}"
 		end
 	end
+	
+	def show_page(page)
+		if page
+			return 1
+		else
+			return 0
+		end
+	end
+
+	def date_check
+		if Time.now < Time.new(2014,9,15)
+			return 2
+		elsif Time.now > Time.new(2014,9,19,12)
+			return 1
+		else
+			return 2
+		end
+	end
 
 end

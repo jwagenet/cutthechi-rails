@@ -1,22 +1,61 @@
     <li class="candidate">
-      <%= image_tag "photos/#{candidate.photo}.jpg", alt: candidate.name, class: "img-responsive" %>
-      <p class="name"><b><%= candidate.name %></b></p>
-			<p class="bid">Highest Bid: $<%= highest_bid candidate %></p>
-			<p class="description"><%= candidate.comment %></p>
 			
-			<% if logged_in? %>
-				<%= form_for(@bid) do |f| %>
+      <%= image_tag "photos/#{candidate.photo}.jpg", alt: candidate.name, class: "img-responsive" %>
+      
+      
+      
+      <div class="info">
+      <p class="bid">Highest Bid: $<%= highest_bid candidate %></p>
+      <p class="name"><b><%= candidate.name %></b></p>			
+			<p class="description"><%= candidate.comment %></p>
+			</div>
+			
+			
+			<% if date_check == 2 %>
+			
+			<% if logged_in? && @show.blank? %>
+			
+			<div class="login">
+				<p class="center"><%= link_to "Bid on #{candidate.name.split[0]}", candidate, class: "link"%></p>
+				</div>
+			
+			
+			<% elsif logged_in? %>
+			
+			
+				<%= form_for(@bid, html: {class: "form-horizontal"}) do |f| %>
 					<%= render 'shared/error_messages', object: f.object %>
-				
-					<%= f.label :bid, "Bid: $" %>
+					<div class="place">
+					<%= f.label :bid, "Bid: $", class: "" %>
 					<%= f.text_field :bid, placeholder: minimum_bid(candidate) %>
-
+				</div>
+				
 					<%= f.hidden_field :candidate_id, value: candidate.id %>
 					<%= f.hidden_field :minimum_bid, value: minimum_bid(candidate) %>
-
+					
+				
 					<%= f.submit "Place Bid" %>
 				<% end %>
+			
+				
+				
+	
+			
+		
+			
 			<% else %>
-				<%= link_to "Log in to bid", login_path, class: "link"%>
+				
+				<div class="login">
+				<p class="center"><%= link_to "Login to bid", login_path, class: "link"%></p>
+				</div>
+				
 			<% end %>
+			
+			<% else %>
+				<div class="login">
+				<p class="center"><%= link_to "Bidding Closed", "#", class: "link"%></p>
+				</div>
+				<% end %>
+				
+			
     </li>
