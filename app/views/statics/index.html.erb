@@ -2,8 +2,10 @@
 <p>Summarize what's going on with the event: how we are raising money, where the money will go, and other things that happen ding the event.</p>
 
 
-<ul class="candidates">
+<ul id="candidates">
 
 		<%= render @candidates %>
 
 </ul>
+
+<p class="center"><%= link_to "See All Candidates", candidates_path, class: "button" %></p>

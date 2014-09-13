@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 		@bids = @user.bids.order('created_at DESC')
 		@active = @bids & active_bids
 		@all_bids = Bid.all
-		@all_active = active_bids
+		@all_active = active_bids 
 	end
 
 	def new
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 			params.require(:user).permit(:password,:password_confirmation)
 		end
 		def user_params
-			params.require(:user).permit(:name, :email, :password, :password_confirmation)
+			params.require(:user).permit(:name, :email, :phone, :password, :password_confirmation)
 		end
 
 		def correct_user
@@ -56,7 +56,9 @@ class UsersController < ApplicationController
 		def active_bids
 			active = Array.new
 			(1..Candidate.count).each do |i|
+				if Candidate.find(i).bids.order('bid DESC').first
 				active.push(Candidate.find(i).bids.order('bid DESC').first)
+				end
 			end
 			return active
 		end	

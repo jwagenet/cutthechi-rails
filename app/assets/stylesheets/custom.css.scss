@@ -83,11 +83,11 @@ a{
 		color:$primarycolor;
 		}
 	}
-input[type=submit]{
+input[type=submit], .button{
 	background:$gray;
 	color:white;
 	font-size:1.1em;
-	padding:5px 0;
+	padding:4px 0 5px;
 	border:none;
 	margin-top:10px;
 	outline: none;
@@ -97,6 +97,7 @@ input[type=submit]{
 		box-shadow: none !important;
 	&:hover{
 		text-decoration:underline;
+		color:white;
 		}
 	&:active{
 		background:$primarycolor;
@@ -105,18 +106,26 @@ input[type=submit]{
 		}
 
 	}
+.button{
+	margin:0 auto;
+	text-align:center;
+	width: 200px;
+	display:block;
+	}
+	
 
 /* header */
 header{
 	background: $gray-dark;
 	#logo {
-		float: none;
-		margin-right: 10px;
+		float: left;
+		margin-right: 20px;
 		font-size: 1.7em;
  		color: $primarycolor;
- 		text-transform: uppercase;
+ 		text-transform: none;
  		letter-spacing: -1px;
- 		padding-top: 9px;
+ 		margin-top: 10px;
+ 		margin-bottom: 10px;
  		font-weight: bold;
  		line-height: 1;
 	
@@ -128,12 +137,14 @@ header{
 	}
 	nav{
 		display:block;
-		height:40px;
+		margin:10px 0;
 		
 		p{
 			color:white;
 			float:left;
 			line-height:2em;
+			padding: 0 ;
+			margin:0;
 			a{
 				color:white;
 				font-weight:600;
@@ -218,9 +229,10 @@ input {
 
 
 #candidates{
-	min-width:280px;
+	min-width:300px;
 	max-width:100%;
-	overflow:auto;
+	margin: 0 auto;
+	text-align:center;
 
 	}
 
@@ -228,13 +240,14 @@ input {
 .candidate{
 	width: 240px;
 	list-style-type:none;
-	float:left;
+	display:inline-block;
 	margin:20px;
 	overflow: auto;
 	background:white;
-	
-	.comment{
+	text-align:left;
+	.description{
 		width:100%;
+		line-height: 1.5;
 	}
 	.place{
 		
@@ -249,21 +262,23 @@ input {
 		margin:10px auto;
 		margin-top:15px;
 
-	}
-		
+}
 	.info{
-		height:100px;
+		height:126px;
 		padding:0 10px;
 		border:#bbb solid 1px;
 		border-top:none;
 		border-left:none;
 		border-right:none;
+
+		text-align:left;
 		.bid{
 			width:100%;
 			text-shadow:0 0 5px black;
 			margin-top:-26px;
 			font-weight:700;
 			color:white;
+
 			}
 		
 		p{

@@ -5,7 +5,7 @@ class Candidate < ActiveRecord::Base
 
 	def self.search(search)
   	if search
-			Candidate.all.where('name LIKE ?', "%#{search}%")
+			Candidate.all.where('LOWER(name) LIKE ?', "%#{search}%")
  		else
 			Candidate.all
   	end
