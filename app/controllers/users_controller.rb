@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 		@active = @bids & active_bids
 		@all_bids = Bid.all
 		@all_active = active_bids 
+		@users = User.all
 	end
 
 	def new

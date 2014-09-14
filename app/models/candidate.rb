@@ -1,11 +1,11 @@
 class Candidate < ActiveRecord::Base
 	has_many :bids
-	#has_many :users #, through: :bids
+	has_many :users , through: :bids
 		
 
 	def self.search(search)
   	if search
-			Candidate.all.where('LOWER(name) LIKE ?', "%#{search}%")
+			Candidate.all.where('LOWER(name) LIKE ?', "%#{search.lowercase}%")
  		else
 			Candidate.all
   	end

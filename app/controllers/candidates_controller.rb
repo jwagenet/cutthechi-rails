@@ -1,6 +1,6 @@
 class CandidatesController < ApplicationController
   def index
-		@candidates = Candidate.search(params[:search])
+		@candidates = Candidate.search(params[:search]).order('name ASC')
 		@bid = current_user.bids.build if logged_in?
   end
 

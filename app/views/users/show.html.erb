@@ -1,5 +1,5 @@
 <% provide(:title, @user.name) %>
-<h1>Here are your bids, <%= @user.name.split[0] %>!</h1>
+<h1>Here are your bids, <%= @user.name.split[0]%>!</h1>
 
 
 
@@ -33,6 +33,12 @@
 	<h2><%= @user.bids.count %> bids in total.</h2>
 	<table class="table table-striped table-condensed">
 		<%= render @all_bids %>
+	</table>
+	
+	
+	<h2><%= @user.bids.count %> bids in total.</h2>
+	<table class="table table-striped table-condensed">
+		<%= render @users %>
 	</table>
 	<% end %>
 
