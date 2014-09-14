@@ -33,6 +33,7 @@ section {
   overflow: auto;
 }
 
+
 textarea {
   resize: vertical;
 }
@@ -54,6 +55,7 @@ h1 {
   font-size: 2em;
   letter-spacing: -1px;
   font-weight:600;
+  margin-top:30px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -226,6 +228,13 @@ input {
 
 .container{
 	max-width:1000px;
+	}
+	
+.top{
+	width:100%;
+	background:white;
+	margin-bottom:40px;
+	padding-bottom:20px;
 	}
 
 

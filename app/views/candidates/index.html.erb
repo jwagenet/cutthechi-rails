@@ -1,6 +1,10 @@
-<% provide(:title, 'Candidates') %>
+<% provide(:title, 'Make a Bid') %>
+<div class="top">
+<div class="container">
 <h1>Make a Bid</h1>
 <p>A bid on your favorite member’s hair is a bid to help us support United States troops through the USO. A winning bid is a chance to give any haircut you like; goofy or glamorous. We promise to keep your masterpiece at least until Sunday. <%= link_to "Learn about the Event", event_path %></p>
+</div></div>
+<div class="container">
 <%= form_tag candidates_path, method: 'get', class: "search" do %>
 		<div>
 		<%= text_field_tag :search, params[:search] %>
@@ -13,3 +17,4 @@
 		<%= render @candidates %>
 
 </ul>
+</div>
