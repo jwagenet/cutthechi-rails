@@ -1,10 +1,10 @@
-<% provide(:title, @user.name) %>
+<% provide(:title, @user.name.downcase.titleize) %>
 
 <div class="top">
 
 
 <div class="container">
-<h1>Here are your bids, <%= @user.name.split[0] %>!</h1>
+<h1>Here are your bids, <%= @user.name.split[0].downcase.titleize %>!</h1>
 <% if @user.bids.any? %>
 <p>Thanks for supporting Cut the Chi and making a bid or two! Here you should keep track of the bids you've made and pay attention for people outbidding you. Make sure you win that haircut! When you're done here you can take a look at <%= link_to "Bidding Progress", candidates_path %> or <%= link_to "Learn about the Event", event_path %>.</p>
 <% end %>
