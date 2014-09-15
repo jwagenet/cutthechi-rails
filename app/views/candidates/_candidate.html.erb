@@ -5,7 +5,13 @@
       
       
       <div class="info">
-      <p class="bid">Highest Bid: $<%= highest_bid candidate %></p>
+      <% if (highest_bid candidate) > 0 %>
+            <p class="bid">Highest Bid: $<%= highest_bid candidate %><br />By <%= candidate.users.order("bid DESC").first.name %></p> 
+      <% else %>
+          
+						<p class="bid"> <br />No Bids</p>
+      <% end %>    
+            
       <p class="name"><b><%= candidate.name %></b></p>			
 			<p class="description"><%= candidate.comment %></p>
 			</div>
