@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140913202723) do
+ActiveRecord::Schema.define(version: 20140915055046) do
 
   create_table "bids", force: true do |t|
     t.integer  "candidate_id"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20140913202723) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "candidates", ["photo"], name: "index_candidates_on_photo", unique: true
 
   create_table "users", force: true do |t|
     t.string   "name"

@@ -8,3 +8,6 @@
 
 User.create(name: "Jonathan Wagenet", email: "j_wagenet@u.pacific.edu", phone: "5418409908", password: "admin1", admin: "1") 
 
+#Candidate.create(name: "Jack Shih", photo: "jshih", comment: "Please don't make my hair look like shih.") 
+#Candidate.find_by(photo: "jbriggs").update_columns(comment: "Bald guys never have a bad hair day.")
+#Candidate.find_by(photo: "jshih").destroy
