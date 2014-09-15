@@ -17,6 +17,8 @@
 			<div class="alert alert-error">Bidding has not opened yet, please wait!</div>
 		<% elsif date_check == 1 %>
 			<div class="alert alert-success">Bidding has ended! Thanks for participating and be sure to attend the event Sept. 19 at 4pm.</div>
+		<% else %>
+						<div class="alert alert-notification">Bidding ends Sept. 19 at 12pm. Get Bidding!</div>
 		<% end %>
 		
 		
@@ -26,6 +28,8 @@
 		
 		<div id="content">		
 			<%= yield %>
+			
+			<div class
 		</div>
 
 		<%= render 'layouts/footer' %>
