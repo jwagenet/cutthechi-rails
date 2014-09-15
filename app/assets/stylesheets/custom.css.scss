@@ -3,7 +3,7 @@
 
 $gray-medium-light: #eaeaea;
 $font-stack: "Open Sans", "Helvetica-Neue", Helvetica, Arial, sans-serif;
-$primarycolor: #FF5400;
+$primarycolor: #b3000c;
 
 
 /* universal */
@@ -410,6 +410,7 @@ form.search{
 	font-size:1.1em;
 	text-align:center;
 	font-weight:600;
+	margin:0;
 	
 	}
 	
@@ -421,7 +422,7 @@ form.search{
 	font-size:1.1em;
 	text-align:center;
 	font-weight:600;
-	
+	margin:0;
 	}
 	
 #error_explanation{
