@@ -1,67 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
-
-  div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
-
-  div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= favicon_link_tag 'favicon.ico' %>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
-
 <body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+
+	<div id="wrapper">
+		<%= render 'layouts/header' %>
+	
+		<% if date_check == 0 %>
+			<div class="alert alert-error">Bidding has not opened yet, please wait!</div>
+		<% elsif date_check == 1 %>
+			<div class="alert alert-success">Bidding has ended! Thanks for participating and be sure to attend the event Sept. 19 at 4pm.</div>
+		<% end %>
+		
+		
+		<% flash.each do |key, value| %>
+		<div class="alert alert-<%= key %>"><%= value %></div>
+		<% end %>	
+		
+		<div id="content">		
+			<h1>Oops, this page doesnt exist!</h1>
+			<p>Seems you found a dusty corner of this website. Maybe you should go look at the <%= link_to "Candidates", candidates_path %> or check out the <%= link_to "Event", event_path %>. </p>
+		</div>
+
+		<%= render 'layouts/footer' %>
+		<%= debug(params) if Rails.env.development? %>
+	</div>
+
 </body>
 </html>
