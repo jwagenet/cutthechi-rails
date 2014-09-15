@@ -19,9 +19,9 @@ module ApplicationHelper
 	end
 
 	def date_check
-		if Time.now.in_time_zone("Pacific Time (US & Canada)") < Time.new(2014,9,15).in_time_zone("Pacific Time (US & Canada)")
+		if Time.now< Time.new(2014,9,15,7)
 			return 0
-		elsif Time.now.in_time_zone("Pacific Time (US & Canada)") > Time.new(2014,9,19,12).in_time_zone("Pacific Time (US & Canada)")
+		elsif Time.now> Time.new(2014,9,19,19)
 			return 1
 		else
 			return 2
