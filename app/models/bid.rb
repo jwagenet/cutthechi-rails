@@ -21,4 +21,11 @@ class Bid < ActiveRecord::Base
 			errors.add(:bid, "must be at least $#{minimum_bid}")
 		end
 	end	
+	
+	def less_than_max
+		if bid.blank? || bid > (minimum_bid + 45)
+			errors.add(:bid, "must be within $50 of current bid")
+		end
+	end	
+	
 end
