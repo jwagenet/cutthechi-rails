@@ -34,7 +34,7 @@ Cut the Chi 2014 Website
 ##Webapp Information
 
 A master of this app/website will exist at [jwagenet/cutthechi-rails](https://github.com/jwagenet/cutthechi-rails).
-A demo will exist at [heroku:salty-crag-7766](http://salty-crag-7766.herokuapp.com/).
+A demo will exist at [heroku:pacificcutthechi](http://pacificcutthechi.herokuapp.com/).
 
 This app is partially based of the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), however uses some differnet names, skips testing, and deviates after user sessions. This app also uses up to date versions of ruby, rails, and other rubygems.
 
