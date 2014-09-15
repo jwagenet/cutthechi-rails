@@ -35,7 +35,7 @@
 
 	<h2><%= @all_active.count %> active bids.</h2>
 	<table class="table table-striped table-condensed">
-			
+			<%= render @all_active %>
 	</table>
 
 	<h2><%= @user.bids.count %> bids in total.</h2>
@@ -44,7 +44,7 @@
 	</table>
 	
 	
-	<h2><%= @user.bids.count %> bids in total.</h2>
+	<h2><%= User.all.count %> users in total.</h2>
 	<table class="table table-striped table-condensed">
 		<%= render @users %>
 	</table>
