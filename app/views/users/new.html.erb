@@ -3,7 +3,7 @@
 
 	<%= form_for @user, html: {class: "form-horizontal"} do |f| %>
 		<%= render 'shared/error_messages', object: f.object %>
-		<%= f.label :name , "Full Name" %>
+		<%= f.label :name , "First and Last Name" %>
 		<%= f.text_field :name %>
 	
 		<%= f.label :email %>
