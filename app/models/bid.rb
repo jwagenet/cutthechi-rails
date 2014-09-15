@@ -8,7 +8,7 @@ class Bid < ActiveRecord::Base
 	validates :minimum_bid, presence: true
 
 	validates :bid, presence: true, numericality: { only_integer: true}#, greater_than_or_equal_to: Candidate.find(candidate_id).bids.order('bid DESC').first[:bid], message: "must be at least $Candidate.find(candidate_id).bids.order('bid DESC').first[:bid]" } 
-	validate :multiple_of_five, :greater_than_minimum
+	validate :multiple_of_five, :greater_than_minimum, :less_than_max
 
 	def multiple_of_five
 		if bid.blank? || bid % 5 != 0
