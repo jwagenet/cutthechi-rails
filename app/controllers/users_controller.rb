@@ -8,8 +8,8 @@ class UsersController < ApplicationController
 		@bids = @user.bids.order('created_at DESC')
 		@active = @bids & active_bids
 		@all_bids = Bid.all
-		@all_active = active_bids 
-		@users = User.all
+		@all_active = active_bids
+		@users = User.all.order("name ASC")
 	end
 
 	def new
