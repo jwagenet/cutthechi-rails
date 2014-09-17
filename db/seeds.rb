@@ -8,7 +8,9 @@
 
 User.create(name: "Jonathan Wagenet", email: "j_wagenet@u.pacific.edu", phone: "5418409908", password: "admin1", admin: "1") 
 
-Candidate.create(name: "Micah Byerly", photo: "mbyerly", comment: "They call me dreamboy.") 
+Candidate.create(name: "Alan Nader", photo: "anader", comment: "Wait... What is this picture for again?") 
+Candidate.create(name: "Nate Lopez", photo: "nlopez", comment: "What am I getting myself into?") 
+
 #Candidate.find_by(photo: "jbriggs").update_columns(comment: "Bald guys never have a bad hair day.")
 #Candidate.find_by(photo: "jshih").destroy
 
