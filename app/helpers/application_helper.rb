@@ -21,7 +21,7 @@ module ApplicationHelper
 	def date_check
 		if Time.now< Time.new(2014,9,15,7)
 			return 0
-		elsif Time.now> Time.new(2014,9,19,19)
+		elsif Time.now> Time.new(2014,9,19,19,1)
 			return 1
 		else
 			return 2
