@@ -11,6 +11,6 @@
 
 #Candidate.create(name: "Nate Lopez", photo: "nlopez", comment: "What am I getting myself into?") 
 
-Candidate.find_by(photo: "sstaley").update_columns(comment: "Four score and seven beards ago.")
+Candidate.find_by(photo: "jshih").update_columns(comment: "Don't make it look like Shih.")
 #Candidate.find_by(photo: "jshih").destroy
 
