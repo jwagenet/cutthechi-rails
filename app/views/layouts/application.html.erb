@@ -12,15 +12,17 @@
 
 	<div id="wrapper">
 		
-		<%= render 'layouts/header' %>
+		
 	
 		<% if date_check == 0 %>
 			<div class="alert alert-error">Bidding has not opened yet, please wait!</div>
 		<% elsif date_check == 1 %>
 			<div class="alert alert-success">Bidding has ended! Thanks for participating and be sure to attend the event Sept. 18 at 4pm.</div>
 		<% else %>
-						<div class="alert alert-notification">Bidding ends Sept. 18 at 12pm. Get Bidding!</div>
+			<div class="alert alert-notification">Bidding ends Sept. 18 at 12pm. Get Bidding!</div>
 		<% end %>
+
+		<%= render 'layouts/header' %>
 		
 		
 		<% flash.each do |key, value| %>

@@ -150,7 +150,7 @@ header{
 	}
 	nav{
 		
-		margin:10px 0;
+		margin:10px 0px;
 		display: block;
 		
 		p{
@@ -159,6 +159,7 @@ header{
 			line-height:1.5;
 			padding: 0 ;
 			margin:0;
+			margin-bottom:5px;
 			
 			a{
 				color:$primarycolor;
@@ -301,7 +302,7 @@ input {
 
 }
 	.info{
-		height:148px;
+		height:160px;
 		padding:0 10px;
 		border:#bbb solid 1px;
 		border-top:none;
@@ -312,7 +313,7 @@ input {
 		.bid{
 			width:100%;
 			text-shadow:0 0 5px black;
-			margin-top:-48px;
+			margin-top:-50px;
 			font-weight:700;
 			color:white;
 			line-height:1.5em;
@@ -453,8 +454,8 @@ form.search{
 	margin:0;
 	}
 .alert-notification{
-	background:white;
-	
+	background:#00B32C;
+	color:white;
 	border:none;
 	border-radius:0px;
 	font-size:1.1em;

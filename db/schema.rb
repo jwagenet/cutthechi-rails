@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140915055046) do
+ActiveRecord::Schema.define(version: 20150914190241) do
 
   create_table "bids", force: true do |t|
     t.integer  "candidate_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140915055046) do
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "commit"
   end
 
   add_index "candidates", ["photo"], name: "index_candidates_on_photo", unique: true
