@@ -17,5 +17,9 @@ module BidsHelper
 		end
 	end
 
+	def commit(candidate)
+			return candidate.commit
+	end
+
 
 end

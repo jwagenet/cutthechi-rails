@@ -14,6 +14,16 @@
             
       <p class="name"><b><%= candidate.name %></b></p>			
 			<p class="description"><%= candidate.comment %></p>
+			<% if (commit candidate) == 1 %>
+			    <p class="commit">Commited for a whole week.</p> 
+			<% elsif (commit candidate) == 2 %>
+			  
+			    <p class="commit">Commited for a half week.</p>
+		        		        
+			<% else %>
+			  
+			    <p class="commit"> <br /></p>
+		        <% end %> 
 			</div>
 			
 			

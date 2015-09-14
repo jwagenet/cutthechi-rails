@@ -11,7 +11,8 @@ namespace :csv do
       Candidate.create!({
         :name => row[0],
         :photo => row[1],
-        :comment=> row[2],        
+        :comment=> row[2],
+	:commit=> row[3],        
       })
       puts "Row #{row[0]} added!"
     end

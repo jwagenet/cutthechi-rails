@@ -301,8 +301,15 @@ input {
 		margin-top:15px;
 
 }
+	.commit{
+		color: $primarycolor;
+		font-weight:600;
+		font-size:1em;
+		height:20px;
+		margin-top:-20px;
+	}
 	.info{
-		height:160px;
+		height:180px;
 		padding:0 10px;
 		border:#bbb solid 1px;
 		border-top:none;
@@ -310,6 +317,7 @@ input {
 		border-right:none;
 
 		text-align:left;
+		
 		.bid{
 			width:100%;
 			text-shadow:0 0 5px black;
@@ -318,6 +326,11 @@ input {
 			color:white;
 			line-height:1.5em;
 
+			}
+		.commit{
+				color: $primarycolor;
+				font-weight:600;
+				font-size:1em;
 			}
 		
 		p{
