@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#User.create(name: "Jonathan Wagenet", email: "j_wagenet@u.pacific.edu", phone: "5418409908", password: "admin1", admin: "1") 
+User.create(name: "Jonathan Wagenet", email: "j_wagenet@u.pacific.edu", phone: "5418409908", password: "admin1", admin: "1") 
 
 
-Candidate.create(name: "Stefan Soezeri", photo: "ssoezeri", comment: "Because my girlfriend made me.") 
+#Candidate.create(name: "Stefan Soezeri", photo: "ssoezeri", comment: "Because my girlfriend made me.") 
 
 #Candidate.find_by(photo: "bchen").update_columns(comment: "Help me reach my dream of becoming the next Dalai Lama.")
 #Candidate.find_by(photo: "tosterchrist").update_columns(comment: "I just want a haircut.")
