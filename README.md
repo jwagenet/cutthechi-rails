@@ -1,4 +1,4 @@
-Cut the Chi 2014 Website
+Cut the Chi Website
 ==========================
 
 ##Interface requirements and features checklist:
@@ -38,7 +38,7 @@ A demo will exist at [heroku:pacificcutthechi](http://pacificcutthechi.herokuapp
 
 This app is partially based of the [Ruby on Rails Tutorial](http://www.railstutorial.org/book), however uses some differnet names, skips testing, and deviates after user sessions. This app also uses up to date versions of ruby, rails, and other rubygems.
 
-If you would like to play along at home, get an environment set up with ruby 2.x or 2.1.x and rails 4.1.4. additional rubygems used are in the Gemfile. The Rails Tutorial can help get you set up, but be mindful of the versions you use. Good luck on Windows.
+If you would like to play along at home, set up an environment with with ruby 2.3.x and rails 5.0.x. additional rubygems used are in the Gemfile. The Rails Tutorial can help get you set up, but be mindful of the versions you use. Good luck on Windows.
 
 To get up and running you should navigate to the downloaded git repo of the app and:
 
