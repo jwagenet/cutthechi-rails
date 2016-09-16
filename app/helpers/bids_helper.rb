@@ -11,7 +11,7 @@ module BidsHelper
 
 	def minimum_bid(candidate)
 		if highest_bid(candidate) == 0
-			return 15
+			return 20
 		else
 			return highest_bid(candidate) + 5
 		end
