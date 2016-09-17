@@ -33,6 +33,8 @@
 
 <% if @user.admin %>
 
+	<hr>
+	<h1>Admin Lists</h1>
 	<h2><%= @all_active.count %> active bids. </h2>
 	<table class="table table-striped table-condensed">
 			<%= render @all_active %>
