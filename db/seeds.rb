@@ -7,8 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 #User.all.destroy
-#User.create(name: "Jonathan Wagenet", email: "j_wagenet@u.pacific.edu", phone: "0000000000", password: "admin1", admin: "1") 
+User.create(name: "Jonathan Wagenet", email: "j_wagenet@u.pacific.edu", phone: "0000000000", password: "admin1", admin: "1") 
 User.create(name: "Ryan McVicar", email: "r_mcvicar@u.pacific.edu", phone: "0000000000", password: "admin1", admin: "1") 
+User.create(name: "Brian Chen", email: "b_chen8@u.pacific.edu", phone: "0000000000", password: "admin1", admin: "1")
+#User.create(name: "Jordan Briggs", email: "r@u.pacific.edu", phone: "0000000000", password: "admin1", admin: "1") 
+ 
 
 
 #Candidate.create(name: "Stefan Soezeri", photo: "ssoezeri", comment: "Because my girlfriend made me.") 
