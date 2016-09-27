@@ -63,7 +63,7 @@ class UsersController < ApplicationController
 
 		def active_bids
 			active = Array.new
-			(1..Candidate.count).each do |i|
+			Candidate.pluck(:id).each do |i|
 				if Candidate.find(i).bids.order('bid DESC').first
 				active.push(Candidate.find(i).bids.order('bid DESC').first)
 				end
